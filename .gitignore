@@ -1,0 +1,32 @@
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+*.exe
+*.pdb
+*.dll (optional, if you don't commit built DLLs)
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Temporary files
+*.cache
+*.log
+*.tmp
+
+# IDE-specific
+.vscode/
+.idea/
+
+# OS-generated files
+Thumbs.db
+.DS_Store
+
+# Optional: Ignore project-specific generated files
+*.csproj.DotSettings
