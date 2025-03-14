@@ -137,23 +137,26 @@ namespace To_Do_List_App
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            ConnectToDatabase(con =>
+            if (toDoListView.CurrentCell != null)
             {
-                string query = "DELETE FROM TaskList " +
-                                "WHERE ProjectID LIKE @Id";
-
-                int idValue = Convert.ToInt32(toDoListView.CurrentCell.Value);
-
-                using (SqlCommand sc = new SqlCommand(query, con))
+                ConnectToDatabase(con =>
                 {
-                    sc.Parameters.AddWithValue("@Id", idValue);
-                    sc.ExecuteNonQuery();
-                }
-            });
+                    string query = "DELETE FROM TaskList " +
+                                    "WHERE ProjectID LIKE @Id";
 
-            LoadTaskList();
-            ClearTaskEntry();
-            ExtConsole.WriteLine("Entry Deleted!");
+                    int idValue = Convert.ToInt32(toDoListView.CurrentCell.Value);
+
+                    using (SqlCommand sc = new SqlCommand(query, con))
+                    {
+                        sc.Parameters.AddWithValue("@Id", idValue);
+                        sc.ExecuteNonQuery();
+                    }
+                });
+
+                LoadTaskList();
+                ClearTaskEntry();
+                ExtConsole.WriteLine("Entry Deleted!");
+            }
         }
 
         // Save button to add new data entry
