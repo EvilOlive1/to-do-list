@@ -20,4 +20,11 @@ Databases -> ToDoList -> Tables -> dbo.Categories and dbo.TaskList
 
 File -> Open -> File -> ToDoList_Query.sql
 
-- ToDoList_Query.sql: Contains code that resets/adds/deletes tables and data for a testing environment.
+- ToDoList_Query.sql: Contains code that resets/adds/deletes tables and data for a testing environment
+
+## Rebuiling Executable
+
+- Build -> Rebuild Solution
+- "To Do List App" -> bin -> Debug -> "To Do List App.exe"
+
+Save the new executable as the desktop application
