@@ -1,6 +1,8 @@
-# Issue with starting server on SSMS
+# To Do List Desktop Application
 
-## "Services" needed to connect
+## __Potential Issues__
+
+### __"Services" needed to connect__
 
 Local SQL Server in use: SQLEXPRESS01
 
@@ -9,20 +11,26 @@ Local SQL Server in use: SQLEXPRESS01
 
 These need to be manually started (your PC is old)
 
-## Accessing databases on SSMS
+---
+
+### __Accessing databases on SSMS__
 
 Databases -> ToDoList -> Tables -> dbo.Categories and dbo.TaskList
 
 - dbo.Categories: Contains categories that tasks fall under
 - dbo.TaskList: Contains the list of tasks
 
-## Inserting Tasks for testing
+---
+
+### __Inserting Tasks for testing__
 
 File -> Open -> File -> ToDoList_Query.sql
 
 - ToDoList_Query.sql: Contains code that resets/adds/deletes tables and data for a testing environment
 
-## Rebuiling Executable
+---
+
+### __Rebuiling Executable__
 
 - Build -> Rebuild Solution
 - "To Do List App" -> bin -> Debug -> "To Do List App.exe"
