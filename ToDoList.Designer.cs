@@ -43,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.categoryBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.toDoListView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             // 
             // titleBox
             // 
-            this.titleBox.Location = new System.Drawing.Point(774, 100);
+            this.titleBox.Location = new System.Drawing.Point(774, 73);
             this.titleBox.Name = "titleBox";
             this.titleBox.Size = new System.Drawing.Size(260, 20);
             this.titleBox.TabIndex = 1;
@@ -69,7 +71,7 @@
             // 
             // descriptionBox
             // 
-            this.descriptionBox.Location = new System.Drawing.Point(774, 127);
+            this.descriptionBox.Location = new System.Drawing.Point(774, 100);
             this.descriptionBox.Name = "descriptionBox";
             this.descriptionBox.Size = new System.Drawing.Size(260, 20);
             this.descriptionBox.TabIndex = 2;
@@ -78,7 +80,7 @@
             // label2
             // 
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(702, 127);
+            this.label2.Location = new System.Drawing.Point(702, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 4;
@@ -89,7 +91,7 @@
             // label4
             // 
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(702, 100);
+            this.label4.Location = new System.Drawing.Point(702, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 21);
             this.label4.TabIndex = 6;
@@ -99,7 +101,7 @@
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(774, 182);
+            this.newButton.Location = new System.Drawing.Point(774, 155);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(72, 30);
             this.newButton.TabIndex = 7;
@@ -109,7 +111,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(930, 182);
+            this.deleteButton.Location = new System.Drawing.Point(930, 155);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(72, 30);
             this.deleteButton.TabIndex = 9;
@@ -119,7 +121,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(852, 182);
+            this.saveButton.Location = new System.Drawing.Point(852, 155);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(72, 30);
             this.saveButton.TabIndex = 10;
@@ -143,7 +145,7 @@
             // label5
             // 
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(702, 156);
+            this.label5.Location = new System.Drawing.Point(702, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 15;
@@ -154,7 +156,7 @@
             // dueDatePicker
             // 
             this.dueDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dueDatePicker.Location = new System.Drawing.Point(774, 155);
+            this.dueDatePicker.Location = new System.Drawing.Point(774, 128);
             this.dueDatePicker.Name = "dueDatePicker";
             this.dueDatePicker.Size = new System.Drawing.Size(97, 20);
             this.dueDatePicker.TabIndex = 16;
@@ -183,7 +185,7 @@
             // label6
             // 
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(877, 155);
+            this.label6.Location = new System.Drawing.Point(877, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 20);
             this.label6.TabIndex = 19;
@@ -194,11 +196,29 @@
             // categoryBox
             // 
             this.categoryBox.FormattingEnabled = true;
-            this.categoryBox.Location = new System.Drawing.Point(938, 155);
+            this.categoryBox.Location = new System.Drawing.Point(938, 128);
             this.categoryBox.Name = "categoryBox";
             this.categoryBox.Size = new System.Drawing.Size(96, 21);
             this.categoryBox.TabIndex = 20;
             this.categoryBox.SelectedIndexChanged += new System.EventHandler(this.categoryBox_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(287, 73);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(409, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(179, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 21);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Console Message:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // ToDoList
             // 
@@ -206,6 +226,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1048, 507);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.categoryBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -247,6 +269,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox categoryBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }
 
